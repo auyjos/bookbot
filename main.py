@@ -10,7 +10,7 @@ def get_book_text(filepath:str) -> str:
 
 def main():
     
-    if len(sys.argv) <  1:
+    if len(sys.argv) != 2:
         print('Usage: python3 main.py <path_to_book>')
         sys.exit(1)
     
@@ -29,7 +29,7 @@ def main():
         ch = entry['char']
         if not ch.isalpha():
             continue
-        print(f'{ch}: {entry['num']}')
+        print(f"{ch}: {entry['num']}")
     print("============= END ===============")
 
 if __name__ == '__main__':
